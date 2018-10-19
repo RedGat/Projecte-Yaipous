@@ -5,9 +5,9 @@ function girar( b ){
 	// Accion por defecto para Buttons;
 	//document.body.style.background='red';
 
-	var carta = ( b.id );
-	b.className='girada';
-	b.src='reversocarta.jpg';
+	var carta = ( b.id ); //guardem en la variable carta el id del element que ens han clicat, es a dir, la carta
+	b.className='girada'; //cambiem la clase a girada, per trobar despres la unica cara
+	b.src='reversocarta.jpg'; //cambiem la imatge de la carta per la del revers
 	//carta
 
 	//alert (carta);
