@@ -100,7 +100,7 @@ array_push($arrayLineasc, $atributsc);
 
 
 if(count($arraynoms)>count(array_unique($arraynoms))){
-	echo "hay personajes repetidos";
+	echo '<script language="javascript">alert("hay personajes repetidos");</script>';
 }/*else{
 	echo "No hay personajes repetidos";
 }
@@ -126,7 +126,7 @@ for($v=0;$v<count($arraycaract);$v++){
 	if(in_array($arraycaract[$v], $arraynomsc)){
 		
 	}else{
-		echo "el atributo". $arraycaract[$v]. "no existe en el fichero";
+		echo "la caracteristicas " . $arraycaract[$v] . " no existe";
 	}
 	
 }
@@ -142,7 +142,7 @@ echo "<br>";
 	<h2 style='color:white'>Qui es Qui - Versió Harry Potter</h2>
 
 
-	<form style='float: top' name="reves.php"  method="post">
+	<form name="reves.php"  method="post">
 	<select name="caracteristica">
 		<option value="ulleres si">¿Porta ulleres?</option>
 		<option value="huma si">¿Es huma?</option>
@@ -192,8 +192,8 @@ for ($i=0;$i<count($array_lineas);$i++) {
 //echo "</pre>";
 fclose($fp);
 
-$x=rand(0,14);
-	echo "<img id='escollida' style='float: left; padding-left: 15px' escollida='" . $array_nombres[$x] . "' width='150' height='190' src='" . $array_nombres[$x] . "'>";
+$x=rand(1,9);
+	echo "<img style='float: left; padding-left: 15px' escollida=" . $array_nombres[$x] . " width='150' height='190' src='reversocarta.jpg''>";
 
 
 shuffle($array_nombres); //mezcla el array
@@ -209,7 +209,7 @@ for ($i=0;$i<count($array_nombres);$i++) {
 	}
 	echo "<td>";
 	
-	echo "<img onclick=girar(this) class='cara' style='border:5px solid white' id=" . $array_nombres[$i] . " width='150' height='190' src='./img/" . $array_nombres[$i] . "'>";
+	echo "<img onclick=girar(this) style='border:5px solid white' id=" . $array_nombres[$i] . " width='150' height='190' src='./img/" . $array_nombres[$i] . "'>";
 
 	echo "</td>";
 }
