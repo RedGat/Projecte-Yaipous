@@ -192,9 +192,10 @@ for ($i=0;$i<count($array_lineas);$i++) {
 //echo "</pre>";
 fclose($fp);
 
-$x=rand(0,14);
-	echo "<img id='escollida' style='float: left; padding-left: 15px' escollida='" . $array_nombres[$x] . "' width='150' height='190' src='" . $array_nombres[$x] . "'>";
+$x=rand(0,15);
+echo "<img id='escollida' style='float: left; padding-left: 15px' escollida='" . trim($array_nombres[$x]) . "' width='150' height='190' src='./img/" . trim($array_nombres[$x]) . "'>";
 
+echo "<script type='text/javascript'>alert('". $array_nombres[$x] ."');</script>";
 
 shuffle($array_nombres); //mezcla el array
 
